@@ -10,5 +10,8 @@ composer install
 rm -rf /app/var/*
 sudo -u www-data -E bin/console lexik:jwt:generate-keypair --skip-if-exists
 env | sort
- [ -f /app/sqlite/app.db ] || sudo -u www-data -E bin/console doctrine:database:create
+ [ -f /app/sqlite/app.db ] || (
+   install -o www-data -g www-data /dev/null /app/sqlite/app.db &&
+   sudo -u www-data -E bin/console doctrine:database:create
+ )
 /usr/bin/supervisord
