@@ -25,11 +25,11 @@ clean:
 
 .PHONY: host-shell-runner
 host-shell-runner:
-	docker-compose exec runner bash
+	docker compose exec runner bash
 
 .PHONY: host-shell-builder
 host-shell-builder:
-	docker-compose exec builder sh
+	docker compose exec builder sh
 
 .PHONY: host-docker-stats
 host-docker-stats:
@@ -37,31 +37,31 @@ host-docker-stats:
 
 .PHONY: host-test-install
 host-test-install:
-	docker-compose exec runner bash -c "APP_ENV=test composer install --prefer-dist || true"
+	docker compose exec runner bash -c "APP_ENV=test composer install --prefer-dist || true"
 
 .PHONY: host-test-phpunit
 host-test-phpunit:
-	docker-compose exec runner bash -c "vendor/bin/phpunit --configuration phpunit.xml.dist --testdox"
+	docker compose exec runner bash -c "vendor/bin/phpunit --configuration phpunit.xml.dist --testdox"
 
 .PHONY: host-test-phpstan
 host-test-phpstan:
-	docker-compose exec runner bash -c "vendor/bin/phpstan analyse src --level 6"
+	docker compose exec runner bash -c "vendor/bin/phpstan analyse src --level 6"
 
 .PHONY: host-test-cs-fixer
 host-test-cs-fixer:
-	docker-compose exec runner bash -c "vendor/bin/php-cs-fixer fix --verbose --dry-run"
+	docker compose exec runner bash -c "vendor/bin/php-cs-fixer fix --verbose --dry-run"
 
 .PHONY: host-test-tsc
 host-test-tsc:
-	docker-compose exec builder sh -c "yarn run tsc"
+	docker compose exec builder sh -c "yarn run tsc"
 
 .PHONY: host-test-eslint
 host-test-eslint:
-	docker-compose exec builder sh -c "yarn run eslint assets/"
+	docker compose exec builder sh -c "yarn run eslint assets/"
 
 .PHONY: host-test-jest
 host-test-jest:
-	docker-compose exec builder sh -c "yarn run jest assets"
+	docker compose exec builder sh -c "yarn run jest assets"
 
 .PHONY: host-test-php
 host-test-php:
@@ -91,24 +91,24 @@ host-docker-loki-logs:
 
 .PHONY: host-restart-worker
 host-restart-worker:
-	docker-compose exec runner supervisorctl restart php-worker
+	docker compose exec runner supervisorctl restart php-worker
 
 .PHONY: host-restart-builder
 host-restart-builder:
-	docker-compose exec builder supervisorctl restart typescript-watch
-	docker-compose exec builder supervisorctl restart codegen-watch
+	docker compose exec builder supervisorctl restart typescript-watch
+	docker compose exec builder supervisorctl restart codegen-watch
 
 docker-compose-up:
-	docker-compose -f docker-compose.yaml up -d --build
+	docker compose -f docker-compose.yaml up -d --build
 
 docker-compose-up-dev:
-	docker-compose -f docker-compose.yaml -f docker-compose.debug.yaml up -d --build
+	docker compose -f docker-compose.yaml -f docker-compose.debug.yaml up -d --build
 
 docker-compose-up-dev-amd64:
-	docker-compose -f docker-compose.yaml -f docker-compose.debug.yaml -f docker-compose.amd64.yaml up -d --build
+	docker compose -f docker-compose.yaml -f docker-compose.debug.yaml -f docker-compose.amd64.yaml up -d --build
 
 docker-compose-down:
-	docker-compose -f docker-compose.yaml -f docker-compose.debug.yaml -f docker-compose.amd64.yaml down --remove-orphans
+	docker compose -f docker-compose.yaml -f docker-compose.debug.yaml -f docker-compose.amd64.yaml down --remove-orphans
 
 .PHONY: cs-fixer-fix
 cs-fixer-fix:
