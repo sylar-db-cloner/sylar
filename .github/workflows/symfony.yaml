@@ -32,6 +32,7 @@ jobs:
           echo MERCURE_URL=http://nowhere/.well-known/mercure >> .env.test.local
           echo MERCURE_JWT_SECRET=GHJghjdjYYu1121kjkdstyydsghhdshzhgeh >> .env.test.local
           echo MERCURE_PUBLIC_URL=http://sylar-mercure/.well-known/mercure >> .env.test.local
+          echo SYLAR_CONFIG_FILENAME=$(pwd)/data/sylar.yaml >> .env.test.local
           touch .env
       - name: Cache Composer packages
         id: composer-cache
