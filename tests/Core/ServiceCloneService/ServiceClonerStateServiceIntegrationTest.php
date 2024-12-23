@@ -9,11 +9,15 @@ use App\Core\ServiceCloner\ServiceClonerStatusDTO;
 
 /**
  * @internal
+ *
+ * @group integration
  */
 final class ServiceClonerStateServiceIntegrationTest extends AbstractServiceCloneServiceIntegrationTestCase
 {
     /**
      * @test
+     *
+     * @group zfs-required
      */
     public function it_should_get_service_states(): void
     {

@@ -9,6 +9,8 @@ use Tests\AbstractIntegrationTestCase;
 
 /**
  * @internal
+ *
+ * @group integration
  */
 final class ServerSideEventPublisherIntegrationTest extends AbstractIntegrationTestCase
 {

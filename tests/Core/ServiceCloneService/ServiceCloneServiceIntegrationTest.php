@@ -10,6 +10,9 @@ use DomainException;
 
 /**
  * @internal
+ *
+ * @group zfs-required
+ * @group integration
  */
 final class ServiceCloneServiceIntegrationTest extends AbstractServiceCloneServiceIntegrationTestCase
 {

@@ -14,6 +14,9 @@ use Tests\AbstractIntegrationTestCase;
 
 /**
  * @internal
+ *
+ * @group zfs-required
+ * @group integration
  */
 final class ZfsFilesystemServiceIntegrationTest extends AbstractIntegrationTestCase
 {

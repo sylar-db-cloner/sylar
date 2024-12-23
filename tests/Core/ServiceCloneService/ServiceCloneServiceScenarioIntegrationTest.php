@@ -8,11 +8,15 @@ use App\Core\ServiceCloner\ServiceClonerNamingServiceInterface;
 
 /**
  * @internal
+ *
+ * @group integration
  */
 final class ServiceCloneServiceScenarioIntegrationTest extends AbstractServiceCloneServiceIntegrationTestCase
 {
     /**
      * @test
+     *
+     * @group zfs-required
      */
     public function it_should_start_mysql_master_and_can_query_on_it(): void
     {

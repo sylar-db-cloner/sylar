@@ -12,6 +12,8 @@ use Tests\AbstractIntegrationTestCase;
 
 /**
  * @internal
+ *
+ * @group integration
  */
 final class ServiceClonerCommandLineDumperServiceIntegrationTest extends AbstractIntegrationTestCase
 {

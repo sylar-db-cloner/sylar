@@ -16,6 +16,8 @@ use Tests\AbstractIntegrationTestCase;
 
 /**
  * @internal
+ *
+ * @group integration
  */
 final class ContainerCreationServiceIntegrationTest extends AbstractIntegrationTestCase
 {

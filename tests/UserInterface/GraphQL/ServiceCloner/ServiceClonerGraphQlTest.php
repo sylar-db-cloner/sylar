@@ -29,6 +29,8 @@ class ServiceClonerGraphQlTest extends GraphQlTestCase
 
     /**
      * @test
+     *
+     * @group zfs-required
      */
     public function it_should_start_master_and_clones_though_graphql(): void
     {
@@ -103,6 +105,8 @@ class ServiceClonerGraphQlTest extends GraphQlTestCase
 
     /**
      * @test
+     *
+     * @group zfs-required
      */
     public function it_should_start_master_and_clones_and_restart_clone_though_graphql(): void
     {
