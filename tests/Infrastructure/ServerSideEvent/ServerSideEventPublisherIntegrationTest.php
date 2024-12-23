@@ -11,6 +11,7 @@ use Tests\AbstractIntegrationTestCase;
  * @internal
  *
  * @group integration
+ * @group mercure
  */
 final class ServerSideEventPublisherIntegrationTest extends AbstractIntegrationTestCase
 {

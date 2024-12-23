@@ -27,7 +27,12 @@ jobs:
           sudo apt update
           sudo apt install -y openssh-client
       - name: Copy .env.test.local
-        run: php -r "file_exists('.env.test.local') || copy('.env.test', '.env.test.local');"
+        run: |
+          php -r "file_exists('.env.test.local') || copy('.env.test', '.env.test.local');"
+          echo MERCURE_URL=http://nowhere/.well-known/mercure >> .env.test.local
+          echo MERCURE_JWT_SECRET=GHJghjdjYYu1121kjkdstyydsghhdshzhgeh >> .env.test.local
+          echo MERCURE_PUBLIC_URL=http://sylar-mercure/.well-known/mercure >> .env.test.local
+          touch .env
       - name: Cache Composer packages
         id: composer-cache
         uses: actions/cache@v3
@@ -45,4 +50,4 @@ jobs:
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
           DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
-        run: vendor/bin/phpunit --exclude-group zfs-required,integration
+        run: vendor/bin/phpunit --exclude-group zfs-required,mercure,integration

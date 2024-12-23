@@ -29,6 +29,9 @@ class ReservationsGraphQlTest extends GraphQlTestCase
         $this->reservationTearDown();
     }
 
+    /**
+     * @test
+     */
     public function testItShouldGetReservation(): void
     {
         $result = $this->getGraphQlReservationsQuery();
@@ -54,6 +57,11 @@ class ReservationsGraphQlTest extends GraphQlTestCase
         );
     }
 
+    /**
+     * @test
+     *
+     * @group mercure
+     */
     public function testItShouldAddAReservation(): void
     {
         $result = $this->graphQlMutation(
@@ -87,6 +95,11 @@ class ReservationsGraphQlTest extends GraphQlTestCase
         ], Trail::eval($this->getGraphQlReservationsQuery(), '@last'));
     }
 
+    /**
+     * @test
+     *
+     * @group mercure
+     */
     public function testItShouldDeleteAReservation(): void
     {
         $result = $this->graphQlMutation(
