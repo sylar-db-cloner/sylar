@@ -2,10 +2,10 @@
 
 Service cloner for development purpose
 
-![general](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Groupe-maison-fr/Sylar/master/docs/general.iuml)
+![general](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/sylar-db-cloner/sylar/main/docs/general.iuml)
 
 # Stack
-![general](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Groupe-maison-fr/Sylar/master/docs/stack.iuml)
+![general](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/sylar-db-cloner/sylar/main/docs/stack.iuml)
 
 
 ## Installation
@@ -22,7 +22,7 @@ Service cloner for development purpose
     ```
     mkdir /opt/sylar
     cd /opt/sylar
-    git clone https://github.com/Groupe-maison-fr/Sylar.git
+    git clone https://github.com/sylar-db-cloner/sylar.git
     ```
 
 3. Customize the `/opt/sylar/data` service configurations
