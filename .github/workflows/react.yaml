@@ -1,0 +1,29 @@
+---
+name: React
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  react-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.1.0
+        with:
+          cache: yarn
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      - name: Compile typescript files
+        run: yarn run tsc
+      - name: Run eslint
+        run: yarn run eslint assets/
+      - name: Run tests
+        run: yarn run jest assets
