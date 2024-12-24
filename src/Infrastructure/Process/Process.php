@@ -60,7 +60,7 @@ final class Process implements ProcessInterface
      *
      * @return string[]
      */
-    private function flattenArguments(null|string|array ...$argumentList): array
+    private function flattenArguments(string|array|null ...$argumentList): array
     {
         return array_reduce($argumentList, function (array $arguments, $argument) {
             if (is_array($argument)) {
