@@ -87,7 +87,7 @@ final class ContainerCreationService implements ContainerCreationServiceInterfac
         $hostConfig->setMounts($mounts->map(fn (Mount $mount) => $this->mountSpecificationFactory->createFromConfiguration($containerParameter, $mount))->toArray());
     }
 
-    private function setPortBindings(ContainerParameterDTO $containerParameter, HostConfig $hostConfig, service $service): void
+    private function setPortBindings(ContainerParameterDTO $containerParameter, HostConfig $hostConfig, Service $service): void
     {
         $ports = new ArrayCollection($service->ports);
         if ($ports->isEmpty()) {
@@ -108,7 +108,7 @@ final class ContainerCreationService implements ContainerCreationServiceInterfac
         )));
     }
 
-    private function setNetworkMode(ContainerParameterDTO $containerParameter, HostConfig $hostConfig, service $service): void
+    private function setNetworkMode(ContainerParameterDTO $containerParameter, HostConfig $hostConfig, Service $service): void
     {
         if ($service->networkMode === null) {
             return;

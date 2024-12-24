@@ -42,8 +42,8 @@ final class ConfigurationService implements ConfigurationServiceInterface
                     )],
                 ),
                 [
-                'configurationRoot' => $this->mountedConfigurationPath,
-            ],
+                    'configurationRoot' => $this->mountedConfigurationPath,
+                ],
             ),
         );
     }

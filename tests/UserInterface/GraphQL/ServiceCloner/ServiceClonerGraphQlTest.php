@@ -75,11 +75,11 @@ class ServiceClonerGraphQlTest extends GraphQlTestCase
         $result = $this->graphQlStartService('unit-test-mysql-start-master-clones', 'instance-02', 2);
         self::assertTrue(Trail::eval($result, '[data][startService][success]'), json_encode($result));
         self::assertMatchesPattern([
-                'containerName' => 'unit-test-mysql-start-master-clones_instance-02',
-                'instanceName' => 'instance-02',
-                'instanceIndex' => 2,
-                'time' => '@integer@',
-                'uptime' => '@integer@',
+            'containerName' => 'unit-test-mysql-start-master-clones_instance-02',
+            'instanceName' => 'instance-02',
+            'instanceIndex' => 2,
+            'time' => '@integer@',
+            'uptime' => '@integer@',
         ], Trail::eval($this->getInstancesThroughGraphQlQuery(), '[containers]|@last'));
 
         $result = $this->graphQlStopService('unit-test-mysql-start-master-clones', 'instance-01');

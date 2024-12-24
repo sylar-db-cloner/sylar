@@ -55,7 +55,7 @@ final class ZfsFilesystemService implements FilesystemServiceInterface
         $this->process->run('/sbin/zfs', 'destroy', sprintf('%s@%s', $name, $snap), $force ? '-Rf' : null);
     }
 
-    public function cloneSnapshot(string $name, string $snap, string $mountPoint = null): void
+    public function cloneSnapshot(string $name, string $snap, ?string $mountPoint = null): void
     {
         if ($mountPoint === null) {
             $mountPoint = sprintf('%s-%s', $name, $snap);
@@ -87,7 +87,7 @@ final class ZfsFilesystemService implements FilesystemServiceInterface
         );
     }
 
-    public function getSnapshot(string $name, string $instance = null): ?FilesystemDTO
+    public function getSnapshot(string $name, ?string $instance = null): ?FilesystemDTO
     {
         $snapshotName = $instance === null ? $name : sprintf('%s@%s', $name, $instance);
         $snapshots = $this
