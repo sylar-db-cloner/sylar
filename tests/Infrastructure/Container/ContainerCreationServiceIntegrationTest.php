@@ -55,21 +55,21 @@ final class ContainerCreationServiceIntegrationTest extends AbstractIntegrationT
             'name' => 'mini-webserver',
             'image' => 'nginx',
             'environments' => [[
-              'name' => 'ENV_VARIABLE_1',
-              'value' => 'ENV_VALUE_1',
+                'name' => 'ENV_VARIABLE_1',
+                'value' => 'ENV_VALUE_1',
             ]],
             'labels' => [[
-              'name' => 'environment',
-              'value' => 'unit-test',
+                'name' => 'environment',
+                'value' => 'unit-test',
             ]],
             'ports' => [[
-              'hostIp' => '0.0.0.0',
-              'hostPort' => '8198/tcp',
-              'containerPort' => '80/tcp',
+                'hostIp' => '0.0.0.0',
+                'hostPort' => '8198/tcp',
+                'containerPort' => '80/tcp',
             ]],
             'mounts' => [[
-              'source' => '/tmp',
-              'target' => '/app/tmp',
+                'source' => '/tmp',
+                'target' => '/app/tmp',
             ]],
         ]);
         $this->containerCreationService->createDocker(

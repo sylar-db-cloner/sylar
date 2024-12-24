@@ -16,7 +16,7 @@ final class DockerFactory implements DockerFactoryInterface
     ) {
     }
 
-    public function create(string $dockerRemoteSocket = null): Client
+    public function create(?string $dockerRemoteSocket = null): Client
     {
         return Docker::create(DockerClientFactory::createFromEnv(
             null,
