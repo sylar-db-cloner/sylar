@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1a1d0d15e0679fd22d85ac9f389a404",
+    "content-hash": "4d91d45c93c16b15b70530c29de9a43c",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -5412,37 +5412,37 @@
         },
         {
             "name": "supervisorphp/supervisor",
-            "version": "v4.0.0",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/supervisorphp/supervisor.git",
-                "reference": "3deb0b1e0a79ac155172074f727a47b9ee68940b"
+                "reference": "e8a5ac306748c5fc6f53ada6a68648eef5a1a286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/supervisorphp/supervisor/zipball/3deb0b1e0a79ac155172074f727a47b9ee68940b",
-                "reference": "3deb0b1e0a79ac155172074f727a47b9ee68940b",
+                "url": "https://api.github.com/repos/supervisorphp/supervisor/zipball/e8a5ac306748c5fc6f53ada6a68648eef5a1a286",
+                "reference": "e8a5ac306748c5fc6f53ada6a68648eef5a1a286",
                 "shasum": ""
             },
             "require": {
                 "lstrojny/fxmlrpc": ">=0.12",
-                "php": ">=7.3"
+                "php": ">=8.1",
+                "psr/log": ">=1"
             },
             "require-dev": {
                 "behat/behat": "^3.0",
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "guzzlehttp/guzzle": "^6.0",
-                "http-interop/http-factory-guzzle": "^1.0",
-                "overtrue/phplint": "^2.0",
-                "php-http/guzzle6-adapter": "^2.0",
+                "guzzlehttp/guzzle": "^7",
                 "php-http/httplug": "^2.1",
                 "php-http/message": "^1.8",
-                "phpspec/phpspec": "^6.2",
-                "phpstan/phpstan": "^0.12.32",
-                "phpstan/phpstan-strict-rules": "^0.12.2",
-                "roave/security-advisories": "dev-master",
-                "supervisorphp/configuration": "^0.2"
+                "php-parallel-lint/php-console-highlighter": "^1",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpspec/phpspec": "^7",
+                "phpstan/phpstan": "^1",
+                "phpstan/phpstan-strict-rules": "^1",
+                "roave/security-advisories": "dev-latest",
+                "supervisorphp/configuration": "^0.3"
             },
             "type": "library",
             "autoload": {
@@ -5472,9 +5472,9 @@
             ],
             "support": {
                 "issues": "https://github.com/supervisorphp/supervisor/issues",
-                "source": "https://github.com/supervisorphp/supervisor/tree/v4.0.0"
+                "source": "https://github.com/supervisorphp/supervisor/tree/5.1.0"
             },
-            "time": "2020-07-02T01:08:38+00:00"
+            "time": "2022-11-21T11:48:01+00:00"
         },
         {
             "name": "symfony/asset",
@@ -11779,22 +11779,22 @@
         },
         {
             "name": "phpstan/phpstan-symfony",
-            "version": "1.3.2",
+            "version": "1.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-symfony.git",
-                "reference": "7332b90dfc291ac5b4b83fbca2081936faa1e3f9"
+                "reference": "c7b7e7f520893621558bfbfdb2694d4364565c1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-symfony/zipball/7332b90dfc291ac5b4b83fbca2081936faa1e3f9",
-                "reference": "7332b90dfc291ac5b4b83fbca2081936faa1e3f9",
+                "url": "https://api.github.com/repos/phpstan/phpstan-symfony/zipball/c7b7e7f520893621558bfbfdb2694d4364565c1d",
+                "reference": "c7b7e7f520893621558bfbfdb2694d4364565c1d",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.9.18"
+                "phpstan/phpstan": "^1.12"
             },
             "conflict": {
                 "symfony/framework-bundle": "<3.0"
@@ -11802,8 +11802,8 @@
             "require-dev": {
                 "nikic/php-parser": "^4.13.0",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.3.11",
+                "phpstan/phpstan-strict-rules": "^1.5.1",
                 "phpunit/phpunit": "^8.5.29 || ^9.5",
                 "psr/container": "1.0 || 1.1.1",
                 "symfony/config": "^5.4 || ^6.1",
@@ -11814,7 +11814,8 @@
                 "symfony/http-foundation": "^5.4 || ^6.1",
                 "symfony/messenger": "^5.4",
                 "symfony/polyfill-php80": "^1.24",
-                "symfony/serializer": "^5.4"
+                "symfony/serializer": "^5.4",
+                "symfony/service-contracts": "^2.2.0"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -11844,9 +11845,9 @@
             "description": "Symfony Framework extensions and rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-symfony/issues",
-                "source": "https://github.com/phpstan/phpstan-symfony/tree/1.3.2"
+                "source": "https://github.com/phpstan/phpstan-symfony/tree/1.4.12"
             },
-            "time": "2023-05-16T12:46:15+00:00"
+            "time": "2024-11-06T10:13:18+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

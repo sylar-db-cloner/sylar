@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\UserInterface\Cli;
 
 use fXmlRpc\Client as fXmlRpcClient;
-use fXmlRpc\Transport\HttpAdapterTransport;
+use fXmlRpc\Transport\PsrTransport;
 use GuzzleHttp\Client as GuzzleHttpClient;
+use GuzzleHttp\Psr7\HttpFactory;
 use Http\Adapter\Guzzle7\Client;
-use Http\Message\MessageFactory\GuzzleMessageFactory;
 use Supervisor\Supervisor;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -28,8 +28,8 @@ final class RestartSupervisordWorkersCommand extends Command
         parent::__construct();
         $this->supervisor = new Supervisor(new fXmlRpcClient(
             $supervisordUrl,
-            new HttpAdapterTransport(
-                new GuzzleMessageFactory(),
+            new PsrTransport(
+                new HttpFactory(),
                 new Client(new GuzzleHttpClient([
                     'auth' => [$supervisordUser, $supervisordPassword],
                 ])),
