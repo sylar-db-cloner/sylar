@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ARG COMPOSER_VERSION=2.8.4
 
@@ -15,7 +15,7 @@ RUN apt-get update;\
         supervisor; \
     LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php ;\
     apt-get update ;\
-    apt-get install -y \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
         git \
         php8.2 \
         php8.2-curl \
