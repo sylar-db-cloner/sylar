@@ -5,51 +5,6 @@
         "count": 1
     },
     {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/framework-bundle 6.4: Enabling the integration of Doctrine annotations is deprecated. Set the \"framework.annotations.enabled\" config option to false.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/http-kernel 6.3: Parameter \"container.dumper.inline_factories\" is deprecated, use \".container.dumper.inline_factories\" instead.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/http-kernel 6.3: Parameter \"container.dumper.inline_class_loader\" is deprecated, use \".container.dumper.inline_class_loader\" instead.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cache_warmer\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.reader\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cached_reader\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cache_adapter\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/serializer 6.4: Passing a \"Doctrine\\Common\\Annotations\\PsrCachedReader\" instance as argument 1 to \"Symfony\\Component\\Serializer\\Mapping\\Loader\\AttributeLoader::__construct()\" is deprecated, pass null or omit the parameter instead.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/validator 6.4: Method \"Symfony\\Component\\Validator\\ValidatorBuilder::setDoctrineAnnotationReader()\" is deprecated without replacement.",
-        "count": 1
-    },
-    {
         "location": "Tests\\Core\\ServiceCloner\\Reservation\\ServiceReservationRepositoryTest::setUp",
         "message": "Since symfony/serializer 6.4: Passing a \"Doctrine\\Common\\Annotations\\AnnotationReader\" instance as argument 1 to \"Symfony\\Component\\Serializer\\Mapping\\Loader\\AttributeLoader::__construct()\" is deprecated, pass null or omit the parameter instead.",
         "count": 4
@@ -57,51 +12,6 @@
     {
         "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::setUp",
         "message": "Since symfony/serializer 6.4: Passing a \"Doctrine\\Common\\Annotations\\AnnotationReader\" instance as argument 1 to \"Symfony\\Component\\Serializer\\Mapping\\Loader\\AttributeLoader::__construct()\" is deprecated, pass null or omit the parameter instead.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::testItShouldGetReservation",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cached_reader\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::testItShouldGetReservation",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.reader\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::testItShouldGetReservation",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cache_adapter\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::testItShouldGetReservation",
-        "message": "Since symfony/routing 6.4: Passing an instance of \"Doctrine\\Common\\Annotations\\Reader\" as first and the environment as second argument to \"Symfony\\Component\\Routing\\Loader\\AttributeClassLoader::__construct\" is deprecated. Pass the environment as first argument instead.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::testItShouldGetReservation",
-        "message": "Since symfony/validator 6.4: Method \"Symfony\\Component\\Validator\\ValidatorBuilder::setDoctrineAnnotationReader()\" is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\ServiceCloner\\ServiceListGraphQlTest::testItShouldGetServices",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cached_reader\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\ServiceCloner\\ServiceListGraphQlTest::testItShouldGetServices",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.reader\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\ServiceCloner\\ServiceListGraphQlTest::testItShouldGetServices",
-        "message": "Since symfony/framework-bundle 6.4: The \"annotations.cache_adapter\" service is deprecated without replacement.",
-        "count": 1
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\ServiceCloner\\ServiceListGraphQlTest::testItShouldGetServices",
-        "message": "Since symfony/validator 6.4: Method \"Symfony\\Component\\Validator\\ValidatorBuilder::setDoctrineAnnotationReader()\" is deprecated without replacement.",
         "count": 1
     }
 ]
