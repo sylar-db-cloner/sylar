@@ -3,7 +3,7 @@ parameters:
     env(SECURITY_ENABLED): 'false'
     security_enabled: '%env(bool:SECURITY_ENABLED)%'
 
-    sylar_data_path_default: /%kernel.project_dir%/data
+    sylar_data_path_default: '%kernel.project_dir%/data'
     sylar_data_path: '%env(default:sylar_data_path_default:SYLAR_DATA_PATH)%'
 
     sylar_config_filename_default: '%sylar_data_path%/sylar.yaml'
@@ -27,8 +27,8 @@ services:
         bind:
             $configurationFilename: '%sylar_config_filename%'
             $mountedConfigurationPath: '%mounted_configuration_path%'
-            $containerConfigurationPath: '/%kernel.project_dir%/data'
-            $containerDatabasePath: '/%kernel.project_dir%/data/database'
+            $containerConfigurationPath: '%kernel.project_dir%/data'
+            $containerDatabasePath: '%kernel.project_dir%/data/database'
             $dockerReadOnly: '@docker.readonly'
             $dockerReadWrite: '@docker.readwrite'
 

@@ -7,8 +7,8 @@ services:
         public: true
         arguments:
             $configurationFilename: '%sylar_config_filename%'
-            $mountedConfigurationPath: '/opt/sylar/tests/Core/ServiceCloneService/data'
-            $containerConfigurationPath: '/%kernel.project_dir%/tests/Core/ServiceCloneService/data'
+            $mountedConfigurationPath: '%kernel.project_dir%/tests/Core/ServiceCloneService/data'
+            $containerConfigurationPath: '%kernel.project_dir%/tests/Core/ServiceCloneService/data'
 
     App\Core\ServiceCloner\Reservation\ReservationRepositoryInterface:
         class: App\Core\ServiceCloner\Reservation\ReservationRepository
