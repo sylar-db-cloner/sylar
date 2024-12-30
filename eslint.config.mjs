@@ -2,7 +2,6 @@ import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
 import react from "eslint-plugin-react";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import _import from "eslint-plugin-import";
-import jsxA11Y from "eslint-plugin-jsx-a11y";
 import reactHooks from "eslint-plugin-react-hooks";
 import prettier from "eslint-plugin-prettier";
 import tsParser from "@typescript-eslint/parser";
@@ -24,7 +23,6 @@ export default [{
 }, ...fixupConfigRules(compat.extends(
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
     "plugin:react/jsx-runtime",
@@ -35,7 +33,6 @@ export default [{
         react: fixupPluginRules(react),
         "@typescript-eslint": fixupPluginRules(typescriptEslint),
         import: fixupPluginRules(_import),
-        "jsx-a11y": fixupPluginRules(jsxA11Y),
         "react-hooks": fixupPluginRules(reactHooks),
         prettier: fixupPluginRules(prettier),
     },
@@ -59,7 +56,6 @@ export default [{
     },
 
     rules: {
-        "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-explicit-any": "off",
