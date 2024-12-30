@@ -43,7 +43,7 @@
     "formik": "^2.1.5",
     "graphql": "^16.7.1",
     "history": "^5.0.0",
-    "jwt-decode": "^3.1.2",
+    "jwt-decode": "^4.0.0",
     "lodash": "^4.17.19",
     "moment": "^2.27.0",
     "momentjs": "^2.0.0",

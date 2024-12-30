@@ -4,7 +4,7 @@ import BrightnessHighIcon from '@mui/icons-material/BrightnessHigh';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import LoggerOpenedIcon from '@mui/icons-material/BorderVerticalOutlined';
 import LoggerClosedIcon from '@mui/icons-material/BorderVertical';
-import jwt_decode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 import {
   AppBar,
   Badge,
@@ -50,7 +50,7 @@ const TopBar = ({
     setAnchorEl(null);
   };
   const decodedJwt = authenticationState.jwt
-    ? jwt_decode<{ iat: number; username: string; roles: string[] }>(
+    ? jwtDecode<{ iat: number; username: string; roles: string[] }>(
         authenticationState.jwt,
       )
     : null;
