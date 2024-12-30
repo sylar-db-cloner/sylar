@@ -1,4 +1,4 @@
-FROM docker.io/library/node:18.20.5-alpine
+FROM docker.io/library/node:23.5.0-alpine
 
 RUN apk add \
     yarn \
