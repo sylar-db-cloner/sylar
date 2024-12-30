@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { FailedMessageQuery } from '../../gql/graphql';
 
 const FlattenException = ({

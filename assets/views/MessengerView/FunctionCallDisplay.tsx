@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { ArrElement } from '../../components/Helper';
 import { FailedMessageQuery } from '../../gql/graphql';

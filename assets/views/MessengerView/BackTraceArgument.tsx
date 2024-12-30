@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { DebugTraceCallArgument } from '../../gql/graphql';
 
 const BackTraceArgument = ({

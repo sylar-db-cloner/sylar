@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 const IFrame = (props: { src: string; height: number }) => {
   const { src, height } = props;
 

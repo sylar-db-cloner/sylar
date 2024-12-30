@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import BrightnessHighIcon from '@mui/icons-material/BrightnessHigh';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
