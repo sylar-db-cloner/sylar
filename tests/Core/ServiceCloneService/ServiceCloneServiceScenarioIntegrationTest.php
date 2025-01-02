@@ -29,12 +29,14 @@ final class ServiceCloneServiceScenarioIntegrationTest extends AbstractServiceCl
 
         self::assertSame('TABLE_NAME', current($tableNames));
         self::assertContains('SESSION_VARIABLES', $tableNames);
-        self::assertContains("slow_query_log_file\t/var/log/mysql/mariadb-slow.log", $slowQueryVariables);
+        self::assertContains("slow_query_log_file\t/var/log/mysql/slowslow.log", $slowQueryVariables);
         $this->serviceCloneService->stop('unit-test-mysql-start-master', ServiceClonerNamingServiceInterface::MASTER_NAME);
     }
 
     /**
-     * @aatest
+     * @test
+     *
+     * @group zfs-required
      */
     public function it_should_start_master_and_clones(): void
     {

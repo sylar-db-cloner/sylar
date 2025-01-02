@@ -42,16 +42,18 @@ final class ServiceClonerArrayDumperServiceIntegrationTest extends AbstractInteg
 
     private function getExpectedLifecycleHooksArray(): array
     {
+        $mounted_configuration_path = getenv('MOUNTED_CONFIGURATION_PATH');
+
         return json_decode(<<<EOJ
                         {
-                        "configurationRoot": "\/opt\/sylar\/tests\/Core\/ServiceCloneService\/data\/start_master",
-                        "stateRoot": "\/app\/data",
+                        "configurationRoot": "{$mounted_configuration_path}/tests/Core/ServiceCloneService/data/start_master",
+                        "stateRoot": "/app/data",
                         "zpoolName": "sylar",
-                        "zpoolRoot": "\/sylar",
+                        "zpoolRoot": "/sylar",
                         "services": [
                             {
                                 "name": "unit-test-mysql-start-master",
-                                "image": "library\/mariadb:10.5.3",
+                                "image": "library/mariadb:10.5.3",
                                 "command": "",
                                 "entryPoint": null,
                                 "networkMode": "n1",
@@ -61,7 +63,7 @@ final class ServiceClonerArrayDumperServiceIntegrationTest extends AbstractInteg
                                             "executionEnvironment": "host",
                                             "command": [
                                                 "ls",
-                                                "\/"
+                                                "/"
                                             ]
                                         }
                                     ],
@@ -77,7 +79,7 @@ final class ServiceClonerArrayDumperServiceIntegrationTest extends AbstractInteg
                                             "executionEnvironment": "host",
                                             "command": [
                                                 "ls",
-                                                "\/"
+                                                "/"
                                             ]
                                         }
                                     ],
@@ -86,7 +88,7 @@ final class ServiceClonerArrayDumperServiceIntegrationTest extends AbstractInteg
                                             "executionEnvironment": "host",
                                             "command": [
                                                 "ls",
-                                                "\/"
+                                                "/"
                                             ]
                                         }
                                     ]
@@ -122,17 +124,17 @@ final class ServiceClonerArrayDumperServiceIntegrationTest extends AbstractInteg
                                     },
                                     {
                                         "name": "CLONE_REPLICATED_FILESYSTEM",
-                                        "value": "toto\/tata"
+                                        "value": "toto/tata"
                                     }
                                 ],
                                 "mounts": [{
                                     "source": "toto/tata",
                                     "target": "/var/lib/mysql"
                                 },{
-                                    "source": "/opt/sylar/tests/Core/ServiceCloneService/data/start_master",
+                                    "source": "{$mounted_configuration_path}/tests/Core/ServiceCloneService/data/start_master",
                                     "target": "/app"
                                 },{
-                                    "source": "/opt/sylar/tests/Core/ServiceCloneService/data/start_master/mysql/etc/mysql/conf.d",
+                                    "source": "{$mounted_configuration_path}/tests/Core/ServiceCloneService/data/start_master/mysql/etc/mysql/conf.d",
                                     "target": "/etc/mysql/conf.d"
                                 }],
                                 "ports": [{

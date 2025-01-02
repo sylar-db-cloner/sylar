@@ -45,8 +45,8 @@ final class ServiceClonerCommandLineDumperServiceIntegrationTest extends Abstrac
         return 'docker run --env MYSQL_ROOT_PASSWORD=root_password --env MYSQL_USER=user' .
             ' --env MYSQL_PASSWORD=password --env MYSQL_DATABASE=roketto --env MYSQL_INITDB_SKIP_TZINFO=1' .
             ' --env CLONE_NAME=mysql-test --env CLONE_INDEX=0 --env CLONE_REPLICATED_FILESYSTEM=toto/tata' .
-            ' --mount type=bind,target=/var/lib/mysql,source=toto/tata --mount type=bind,target=/app,source=/opt/sylar/tests/Core/ServiceCloneService/data/start_master' .
-            ' --mount type=bind,target=/etc/mysql/conf.d,source=/opt/sylar/tests/Core/ServiceCloneService/data/start_master/mysql/etc/mysql/conf.d' .
+            ' --mount type=bind,target=/var/lib/mysql,source=toto/tata --mount type=bind,target=/app,source=' . getenv('MOUNTED_CONFIGURATION_PATH') . '/tests/Core/ServiceCloneService/data/start_master' .
+            ' --mount type=bind,target=/etc/mysql/conf.d,source=' . getenv('MOUNTED_CONFIGURATION_PATH') . '/tests/Core/ServiceCloneService/data/start_master/mysql/etc/mysql/conf.d' .
             ' --publish 0.0.0.0:3406:3306/tcp --label environment=unit-test --net=n1 --name mysql-test --detach library/mariadb:10.5.3';
     }
 }

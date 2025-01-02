@@ -6,17 +6,7 @@
     },
     {
         "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "Since symfony/security-bundle 6.2: The \"enable_authenticator_manager\" option at \"security\" is deprecated.",
-        "count": 2
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
         "message": "Class \"Nyholm\\Psr7\\Factory\\HttplugFactory\" is deprecated since version 1.8, use \"Nyholm\\Psr7\\Factory\\Psr17Factory\" instead.",
         "count": 1
-    },
-    {
-        "location": "Tests\\Core\\ServiceCloneService\\IndexManagerServiceTest::setUp",
-        "message": "The 'resolver' expression function is deprecated since 0.14 and will be removed in 1.0. Use 'query' instead. For more info visit: https://github.com/overblog/GraphQLBundle/issues/775",
-        "count": 2
     }
 ]

@@ -14,10 +14,10 @@ use Twig\Environment;
 #[AsController]
 #[Route(
     path: [
-      '/',
-      '/app/',
-      '/app/{parameters}',
-      '/app/{parameters}/{subParameters}',
+        '/',
+        '/app/',
+        '/app/{parameters}',
+        '/app/{parameters}/{subParameters}',
     ],
     name: 'home',
     methods: ['GET'],

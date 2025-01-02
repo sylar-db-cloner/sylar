@@ -8,5 +8,5 @@ use Docker\API\Client;
 
 interface DockerFactoryInterface
 {
-    public function create(string $dockerRemoteSocket = null): Client;
+    public function create(?string $dockerRemoteSocket = null): Client;
 }
