@@ -147,9 +147,6 @@
             ".php_cs.dist"
         ]
     },
-    "friendsofphp/proxy-manager-lts": {
-        "version": "v1.0.3"
-    },
     "guzzlehttp/guzzle": {
         "version": "6.5.2"
     },
@@ -204,9 +201,6 @@
     },
     "kelunik/certificate": {
         "version": "v1.1.2"
-    },
-    "laminas/laminas-code": {
-        "version": "4.0.0"
     },
     "laminas/laminas-eventmanager": {
         "version": "3.3.0"
@@ -678,9 +672,6 @@
     },
     "symfony/property-info": {
         "version": "v5.0.11"
-    },
-    "symfony/proxy-manager-bridge": {
-        "version": "v5.2.3"
     },
     "symfony/redis-messenger": {
         "version": "v5.2.3"
