@@ -58,12 +58,6 @@ final class User implements JWTUserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
-    #[Ignore]
-    public function getSalt(): ?string
-    {
-        return null;
-    }
-
     public function eraseCredentials(): void
     {
     }

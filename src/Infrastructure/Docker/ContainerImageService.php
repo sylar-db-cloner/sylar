@@ -65,9 +65,9 @@ final readonly class ContainerImageService implements ContainerImageServiceInter
     /**
      * @param ImageSummary[]|ResponseInterface $existingImages
      *
-     * @return ImageSummary[]|ResponseInterface
+     * @return array<int, ImageSummary>
      */
-    public function getFilteredImages(string $imageName, array|ResponseInterface $existingImages): ResponseInterface|array
+    public function getFilteredImages(string $imageName, array|ResponseInterface $existingImages): array
     {
         return array_filter($existingImages, function (ImageSummary $imageSummary) use ($imageName): bool {
             if (str_contains($imageName, ':')) {
