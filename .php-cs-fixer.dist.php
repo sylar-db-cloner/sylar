@@ -44,7 +44,7 @@ return (new PhpCsFixer\Config())
             'on_multiline' => 'ensure_fully_multiline',
         ],
         'single_line_throw' => false,
-        'compact_nullable_typehint' => true,
+        'compact_nullable_type_declaration' => true,
     ])
     ->setCacheFile('/tmp/backend.php_cs.cache')
     ->setFinder(

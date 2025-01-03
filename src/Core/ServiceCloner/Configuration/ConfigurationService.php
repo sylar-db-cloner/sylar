@@ -6,7 +6,6 @@ namespace App\Core\ServiceCloner\Configuration;
 
 use App\Core\ServiceCloner\Configuration\Object\Service;
 use App\Core\ServiceCloner\Configuration\Object\ServiceCloner;
-use Doctrine\Common\Annotations\AnnotationReader;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -55,9 +54,7 @@ final class ConfigurationService implements ConfigurationServiceInterface
             new DateTimeNormalizer(),
             new ObjectNormalizer(
                 new ClassMetadataFactory(
-                    new AnnotationLoader(
-                        new AnnotationReader(),
-                    ),
+                    new AnnotationLoader(),
                 ),
                 null,
                 null,

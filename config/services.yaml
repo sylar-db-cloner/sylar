@@ -33,18 +33,18 @@ services:
             $dockerReadWrite: '@docker.readwrite'
 
     App\:
-        resource: '../../src/*'
+        resource: '../src/*'
         exclude:
-         - '../../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
-         - '../../src/**/Core/ServiceCloner/Reservation/Object/*.php'
-         - '../../src/**/Core/ServiceCloner/Configuration/Object/*.php'
-         - '../../src/**/Infrastructure/Security/Models/*.php'
-         - '../../src/**/*DTO.php'
-         - '../../src/**/*Exception.php'
-         - '../../src/**/*Command.php'
+         - '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+         - '../src/**/Core/ServiceCloner/Reservation/Object/*.php'
+         - '../src/**/Core/ServiceCloner/Configuration/Object/*.php'
+         - '../src/**/Infrastructure/Security/Models/*.php'
+         - '../src/**/*DTO.php'
+         - '../src/**/*Exception.php'
+         - '../src/**/*Command.php'
 
     App\UserInterface\Cli\:
-        resource: '../../src/UserInterface/Cli/**Command.php'
+        resource: '../src/UserInterface/Cli/**Command.php'
         tags: ['console.command']
 
     docker.readwrite:
@@ -102,3 +102,12 @@ services:
                 curl_options:
                     !php/const CURLOPT_CONNECTTIMEOUT_MS: 500,
                     !php/const CURLOPT_TIMEOUT_MS: 600
+
+overblog_graphql:
+  definitions:
+    mappings:
+      types:
+        - type: yaml
+          dir: "%kernel.project_dir%/src/UserInterface/GraphQL/Type"
+          suffix: null
+
