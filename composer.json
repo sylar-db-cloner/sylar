@@ -18,7 +18,7 @@
         "doctrine/orm": "^3.3",
         "haydenpierce/class-finder": "*",
         "itspire/monolog-loki": "^2.0",
-        "lexik/jwt-authentication-bundle": "^2.19",
+        "lexik/jwt-authentication-bundle": "^3.1",
         "micoli/docker-php-api-client": "^4.1",
         "micoli/elql": "^0.7.0",
         "mockery/mockery": "^1.4",
