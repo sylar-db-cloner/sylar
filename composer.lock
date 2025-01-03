@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d94af644099acff359255865a38acb71",
+    "content-hash": "af3eadc6ad11a166c2bb586bc747097b",
     "packages": [
         {
             "name": "aeon-php/calendar",
@@ -354,16 +354,16 @@
         },
         {
             "name": "composer/package-versions-deprecated",
-            "version": "1.11.99.1",
+            "version": "1.11.99.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/package-versions-deprecated.git",
-                "reference": "7413f0b55a051e89485c5cb9f765fe24bb02a7b6"
+                "reference": "b4f54f74ef3453349c24a845d22392cd31e65f1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/7413f0b55a051e89485c5cb9f765fe24bb02a7b6",
-                "reference": "7413f0b55a051e89485c5cb9f765fe24bb02a7b6",
+                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/b4f54f74ef3453349c24a845d22392cd31e65f1d",
+                "reference": "b4f54f74ef3453349c24a845d22392cd31e65f1d",
                 "shasum": ""
             },
             "require": {
@@ -407,7 +407,7 @@
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
             "support": {
                 "issues": "https://github.com/composer/package-versions-deprecated/issues",
-                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.1"
+                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.5"
             },
             "funding": [
                 {
@@ -423,7 +423,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-11T10:22:58+00:00"
+            "time": "2022-01-17T14:14:24+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3844,21 +3844,21 @@
         },
         {
             "name": "php-http/guzzle7-adapter",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/guzzle7-adapter.git",
-                "reference": "fb075a71dbfa4847cf0c2938c4e5a9c478ef8b01"
+                "reference": "03a415fde709c2f25539790fecf4d9a31bc3d0eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/guzzle7-adapter/zipball/fb075a71dbfa4847cf0c2938c4e5a9c478ef8b01",
-                "reference": "fb075a71dbfa4847cf0c2938c4e5a9c478ef8b01",
+                "url": "https://api.github.com/repos/php-http/guzzle7-adapter/zipball/03a415fde709c2f25539790fecf4d9a31bc3d0eb",
+                "reference": "03a415fde709c2f25539790fecf4d9a31bc3d0eb",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.0",
-                "php": "^7.2 | ^8.0",
+                "php": "^7.3 | ^8.0",
                 "php-http/httplug": "^2.0",
                 "psr/http-client": "^1.0"
             },
@@ -3869,14 +3869,11 @@
             },
             "require-dev": {
                 "php-http/client-integration-tests": "^3.0",
+                "php-http/message-factory": "^1.1",
+                "phpspec/prophecy-phpunit": "^2.0",
                 "phpunit/phpunit": "^8.0|^9.3"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.2.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Http\\Adapter\\Guzzle7\\": "src/"
@@ -3900,9 +3897,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/guzzle7-adapter/issues",
-                "source": "https://github.com/php-http/guzzle7-adapter/tree/1.0.0"
+                "source": "https://github.com/php-http/guzzle7-adapter/tree/1.1.0"
             },
-            "time": "2021-03-09T07:35:15+00:00"
+            "time": "2024-11-26T11:14:36+00:00"
         },
         {
             "name": "php-http/httplug",
