@@ -1,4 +1,3 @@
-import React from 'react';
 import { styled } from '@mui/material/styles';
 import { NavLink as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';

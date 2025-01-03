@@ -1,5 +1,5 @@
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import React, { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -18,7 +18,7 @@ const App = () => {
   const routing = useRoutes(routes);
 
   const [prefersDarkMode, setPrefersDarkMode] = useState(initialDarkMode());
-  const theme = React.useMemo(() => {
+  const theme = useMemo(() => {
     return createTheme({
       palette: {
         mode: prefersDarkMode ? 'dark' : 'light',

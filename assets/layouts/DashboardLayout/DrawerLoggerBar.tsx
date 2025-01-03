@@ -1,4 +1,3 @@
-import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Drawer } from '@mui/material';
 import LogList from './LogList';

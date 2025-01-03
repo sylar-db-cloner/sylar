@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import { JSX } from 'react';
 import { Helmet } from 'react-helmet';
 
 const Page = ({

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Checkbox from '@mui/material/Checkbox';
 import TableCell from '@mui/material/TableCell';
@@ -24,7 +23,6 @@ import mutationRetryFailedMessage from '../../graphQL/Messenger/mutationRetryFai
 import EventBus from '../../components/EventBus';
 import BackTraceDisplay from './BackTraceDisplay';
 import FlattenException from './FlattenException';
-import { TriStateCheckbox } from '../../components/TriStateCheckbox';
 import { FailedMessageQuery, FailedMessagesQuery } from '../../gql/graphql';
 import { ArrElement } from '../../components/Helper';
 import { useAuthenticatedClient } from '../../Context/Authentication/AuthenticatedClient';
@@ -136,12 +134,11 @@ const MessengerMessages = () => {
                     <Button onClick={reload}>
                       <Refresh />
                     </Button>
-                    <TriStateCheckbox
+                    <Checkbox
                       edge="start"
                       tabIndex={-1}
-                      checked={
-                        oneOfMessageIsChecked ? null : allMessageAreChecked
-                      }
+                      checked={allMessageAreChecked}
+                      indeterminate={oneOfMessageIsChecked}
                       color="primary"
                       onClick={(event) => {
                         changeCheckAll();

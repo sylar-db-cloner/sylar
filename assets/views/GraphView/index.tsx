@@ -1,4 +1,3 @@
-import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Card, CardHeader, Divider } from '@mui/material';
 import clsx from 'clsx';

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import FunctionCallDisplay from './FunctionCallDisplay';
 import BackTraceArgument from './BackTraceArgument';
 import { ArrElement } from '../../components/Helper';

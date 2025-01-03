@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import PerfectScrollbar from 'react-perfect-scrollbar';
