@@ -15,7 +15,9 @@ Service cloner for development purpose
     ```
     apt-get install zfsutils-linux
     zpool create sylar /dev/sdb /dev/sdc
+    zfs allow 33 create,clone,snapshot,mount,destroy,snapdir sylar
     ```
+    Note: `33` is the user id of `www-data` inside our containers, it may differ on host.
 
 2. Install source
 
