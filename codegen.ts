@@ -17,7 +17,7 @@ const config: CodegenConfig = {
   hooks: {
     afterOneFileWrite: [
       'prettier --write',
-      'eslint --ext=.jsx,.js,.tsx,.ts --fix'
+      'eslint --fix'
     ]
   }
 };

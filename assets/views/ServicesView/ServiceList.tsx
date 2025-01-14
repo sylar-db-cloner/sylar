@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import moment from 'moment';
@@ -149,7 +149,7 @@ const ServiceList = ({ ...rest }) => {
             </TableHead>
             <TableBody>
               {data.map((service) => (
-                <React.Fragment key={service.name}>
+                <Fragment key={service.name}>
                   <TableRow hover>
                     <TableCell style={{ verticalAlign: 'top' }}>
                       {service.name}
@@ -292,7 +292,7 @@ const ServiceList = ({ ...rest }) => {
                       </Collapse>
                     </TableCell>
                   </TableRow>
-                </React.Fragment>
+                </Fragment>
               ))}
             </TableBody>
           </Table>

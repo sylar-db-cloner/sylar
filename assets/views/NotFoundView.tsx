@@ -1,4 +1,3 @@
-import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Container, Typography } from '@mui/material';
 import Page from '../components/Page';
