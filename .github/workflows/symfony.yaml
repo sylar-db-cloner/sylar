@@ -48,7 +48,7 @@ jobs:
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         env:
           DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
-        run: vendor/bin/phpunit --configuration phpunit.xml.dist --exclude-group zfs-required,mercure,integration
+        run: vendor/bin/phpunit --configuration phpunit.xml.dist --exclude-group zfs-required --exclude-group mercure --exclude-group integration
       - name: Execute phpstan
         run: vendor/bin/phpstan analyse src --level 6
       - name: Execute php cs-fixer

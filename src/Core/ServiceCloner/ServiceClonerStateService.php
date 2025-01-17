@@ -76,14 +76,12 @@ class ServiceClonerStateService implements ServiceClonerStateServiceInterface
 
     public function getStates(): array
     {
-        $states = array_filter(
-            array_values(
-                array_map(
-                    fn (string $dockerName) => $this->refreshState(ServiceClonerStatusDTO::createFromArray(
-                        $this->containerLabelService->getDockerLabelsByName($dockerName),
-                    )),
-                    $this->containerFinderService->getDockersByLabel('launcher', 'sylar'),
-                ),
+        $states = array_values(
+            array_map(
+                fn (string $dockerName) => $this->refreshState(ServiceClonerStatusDTO::createFromArray(
+                    $this->containerLabelService->getDockerLabelsByName($dockerName),
+                )),
+                $this->containerFinderService->getDockersByLabel('launcher', 'sylar'),
             ),
         );
         usort($states, function (ServiceClonerStatusDTO $stateA, ServiceClonerStatusDTO $stateB) {

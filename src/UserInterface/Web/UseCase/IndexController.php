@@ -12,16 +12,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use Twig\Environment;
 
 #[AsController]
-#[Route(
-    path: [
-        '/',
-        '/app/',
-        '/app/{parameters}',
-        '/app/{parameters}/{subParameters}',
-    ],
-    name: 'home',
-    methods: ['GET'],
-)]
+#[Route(path: '/', name: 'home', methods: ['GET'])]
+#[Route(path: '/app', name: 'home', methods: ['GET'])]
+#[Route(path: '/app/{parameters}', name: 'home', methods: ['GET'])]
+#[Route(path: '/app/{parameters}/{subParameters}', name: 'home', methods: ['GET'])]
 final class IndexController extends AbstractController
 {
     public function __construct(

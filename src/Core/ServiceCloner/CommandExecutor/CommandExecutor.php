@@ -17,11 +17,9 @@ final class CommandExecutor implements CommandExecutorInterface
 
     public function run(Command $command): array
     {
-        return (new ArrayCollection($command->subCommands))->map(function (string $subCommand) {
-            return new CommandExecutorResultDTO(
-                $subCommand,
-                array_filter(explode(PHP_EOL, $this->process->run('bash', '-c', $subCommand)->getStdOutput())),
-            );
-        })->toArray();
+        return (new ArrayCollection($command->subCommands))->map(fn (string $subCommand) => new CommandExecutorResultDTO(
+            $subCommand,
+            array_filter(explode(PHP_EOL, $this->process->run('bash', '-c', $subCommand)->getStdOutput())),
+        ))->toArray();
     }
 }
