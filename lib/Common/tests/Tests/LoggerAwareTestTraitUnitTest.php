@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Tests\Common\Tests;
 
 use App\Common\Tests\LoggerAwareTestTrait;
+use Monolog\Logger;
 use Monolog\LogRecord;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LogLevel;
-use Symfony\Bridge\Monolog\Logger;
 
 /**
  * @internal
