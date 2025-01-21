@@ -84,7 +84,7 @@ final class ServiceClonerStatusDTO
         return $this->isMaster;
     }
 
-    public function getIndex(): ?int
+    public function getIndex(): int
     {
         return $this->index;
     }
@@ -104,7 +104,7 @@ final class ServiceClonerStatusDTO
         return $this->instanceName;
     }
 
-    public function getZfsFilesystemName(): ?string
+    public function getZfsFilesystemName(): string
     {
         return $this->zfsFilesystemName;
     }

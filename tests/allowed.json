@@ -1,12 +1,1 @@
-[
-    {
-        "location": "Tests\\Core\\ServiceCloner\\Reservation\\ServiceReservationRepositoryTest::setUp",
-        "message": "Since symfony/serializer 6.4: Passing a \"Doctrine\\Common\\Annotations\\AnnotationReader\" instance as argument 1 to \"Symfony\\Component\\Serializer\\Mapping\\Loader\\AttributeLoader::__construct()\" is deprecated, pass null or omit the parameter instead.",
-        "count": 4
-    },
-    {
-        "location": "Tests\\UserInterface\\GraphQL\\Reservation\\ReservationsGraphQlTest::setUp",
-        "message": "Since symfony/serializer 6.4: Passing a \"Doctrine\\Common\\Annotations\\AnnotationReader\" instance as argument 1 to \"Symfony\\Component\\Serializer\\Mapping\\Loader\\AttributeLoader::__construct()\" is deprecated, pass null or omit the parameter instead.",
-        "count": 1
-    }
-]
+[]

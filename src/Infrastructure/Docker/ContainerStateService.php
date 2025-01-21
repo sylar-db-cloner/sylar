@@ -21,7 +21,10 @@ final class ContainerStateService implements ContainerStateServiceInterface
         return $container ? $container->getState() : null;
     }
 
-    public function dockerExposedPorts(string $dockerName): ?array
+    /**
+     * @return array<int>
+     */
+    public function dockerExposedPorts(string $dockerName): array
     {
         $container = $this->dockerFinderService->getDockerByName($dockerName);
 
