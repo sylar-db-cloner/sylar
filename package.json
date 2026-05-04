@@ -62,7 +62,7 @@
     "reconnecting-eventsource": "^1.2.0",
     "reconnecting-websocket": "^4.4.0",
     "sirv": "^3.0.0",
-    "uuid": "^11.0.3",
+    "uuid": "^14.0.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {
